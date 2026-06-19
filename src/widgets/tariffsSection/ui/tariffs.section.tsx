@@ -23,15 +23,18 @@ const containerStyles = {
   paddingTop: '30px',
 }
 
+const locale = 'ru-RU'
+const numFormatter = new Intl.NumberFormat(locale, {style: 'currency', currency: 'RUB' })
+
 const tariffs = [
   {
     title: 'БАЛЧУГ: Торговый портал (до 10 пользователей)',
-    content: ['372 000 руб. в месяц'],
+    content: [`${numFormatter.format(378200)} в месяц`],
   },
   {
     title: 'БАЛЧУГ: Торговый портал (от 10 пользователей)',
     content: [
-      '372 000 руб. + 20 000 руб. (за каждого дополнительного пользователя) в месяц',
+      `${numFormatter.format(378200)} + ${numFormatter.format(20333.33)} (за каждого дополнительного пользователя) в месяц`,
     ],
   },
   {
@@ -45,8 +48,7 @@ const CardsWrapper = styled.div`
   margin-top: 30px;
   flex-direction: row;
   justify-content: center;
-
-  gap: 40px;
+  gap: 20px;
 `
 
 const TariffsSection = ({ id, theme }: ISectionProps) => {

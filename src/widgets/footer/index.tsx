@@ -38,7 +38,8 @@ const Footer = () => {
       <Container sx={containerStyles}>
         <WrapperRow>
           <div>
-            <SectionTitle color="white">БАЛЧУГ-ТЕХ</SectionTitle>
+            <span>Общество с ограниченной ответственностью</span>
+            <SectionTitle color="white">"Балчуг Тех" </SectionTitle>
             <span>ИНН: 9705181987</span>
           </div>
           <Contacts />
